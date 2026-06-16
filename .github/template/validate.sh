@@ -45,7 +45,7 @@ setup() {
   -subj "/C=UK/ST=STATE/L=CITY/O=ORG_NAME/OU=OU_NAME/CN=mongodb" \
   -addext "subjectAltName = DNS:localhost, DNS:mongodb"
   cat .github/template/ssl/mongodb-cert.key .github/template/ssl/mongodb-cert.crt > .github/template/ssl/mongodb.pem
-  mongodbTestCaPem="$(cat .github/template/ssl/mongodb.pem | base64 | tr -d '\n')"
+  mongodbTestCaPem="$(cat .github/template/ssl/mongodb-cert.crt | base64 | tr -d '\n')"
   export MONGODB_TEST_CA_PEM=$mongodbTestCaPem
 
   # Start mongodb + templated service
