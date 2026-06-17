@@ -25,7 +25,7 @@ services:
       PORT: 8085
       SERVICE_VERSION: 0.0.0-local
       ENVIRONMENT: local
-      MONGO_URI: mongodb://mongodb:27017
+      MONGO_URI: mongodb://mongodb:27017/?ssl=true
       MONGO_DATABASE: cdp-java-backend-template
       AWS_REGION: eu-west-2
       AWS_ACCESS_KEY_ID: test
