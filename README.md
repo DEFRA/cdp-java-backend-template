@@ -12,7 +12,7 @@ A Docker Compose template is in [compose.yml](compose.yml).
 
 A local environment with:
 
-- Localstack for AWS services (S3, SQS)
+- Floci for AWS services (S3, SQS)
 - Redis
 - MongoDB
 - This service.
@@ -29,7 +29,7 @@ in [github.com/DEFRA/cdp-local-environment](https://github.com/DEFRA/cdp-local-e
 
 #### MongoDB via Docker
 
-Run infrastructure services (MongoDB, Localstack, Redis):
+Run infrastructure services (MongoDB, Floci, Redis):
 
 ```bash
 docker compose --profile infra up -d
