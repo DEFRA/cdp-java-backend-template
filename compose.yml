@@ -45,29 +45,17 @@ services:
     env_file:
       - 'compose/aws.env'
     environment:
-      # Server
       PORT: 8085
 
-      # Service Identity
-      SERVICE_VERSION: 0.0.0-local
-      ENVIRONMENT: local
-
-      # MongoDB
       MONGO_URI: mongodb://mongodb:27017
-      MONGO_DATABASE: cdp-java-backend-template
 
-      # AWS (via Floci)
+      # AWS (via Floci) - endpoint must use Docker service name, not localhost
       AWS_ENDPOINT_URL: http://floci:4566
       AWS_EMF_AGENT_ENDPOINT: http://floci:4566
-      AWS_REGION: eu-west-2
 
-      # Logging
       LOG_LEVEL: DEBUG
 
-      # Metrics (disabled locally)
-      METRICS_ENABLED: true
-
-      # Spring profile (local = exposes debugging actuator endpoints)
+      # Activates application-local.yml
       SPRING_PROFILES_ACTIVE: local
 
       # Java Debug (optional - uncomment to enable remote debugging)

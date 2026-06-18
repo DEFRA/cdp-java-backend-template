@@ -55,6 +55,8 @@ logging:
     org.springframework.web: ${LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB:INFO}
     org.mongodb: ${LOGGING_LEVEL_ORG_MONGODB_DRIVER:WARN}
     io.netty.handler.logging.LoggingHandler: WARN
+    sun.rmi: WARN
+    javax.management.remote.rmi: WARN
 
 # Actuator endpoints
 # Production: Only health endpoint exposed (secure by default)
